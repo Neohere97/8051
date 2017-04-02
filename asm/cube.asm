@@ -1,0 +1,22 @@
+ORG 00H
+MOV R0, #30h
+MOV A, @R0 
+MOV R1, A 
+MOV B, A 
+MUL AB
+MOV R2, B 
+MOV B, R1 
+INC R0 
+MOV @R0, A 
+MOV R3, B 
+MOV A, R1 
+MOV B, R2 
+MUL AB 
+ADD A, R3
+INC R0 
+MOV @R0, A 
+INC R0 
+MOV A, B
+MOV @R0, A 
+H: SJMP H
+END
